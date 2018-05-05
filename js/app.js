@@ -55,12 +55,12 @@ document.body.onload = startGame();
 function startGame(){
     // shuffle deck
     cards = shuffle(cards);
-    // remove all exisiting classes from each card
-    for (var i = 0; i < cards.length; i++){
-        deck.innerHTML = "";
-        [].forEach.call(cards, function(item) {
-            deck.appendChild(item);
+    deck.innerHTML = "";
+    [].forEach.call(cards, function(item) {
+    deck.appendChild(item);
         });
+    // remove all exisiting classes from each card
+    for (var i = 0; i < cards.length; i++){        
         cards[i].classList.remove("show", "open", "match", "disabled");
     }
     // reset moves
@@ -223,7 +223,7 @@ function congratulations(){
 function closeModal(){
     closeicon.addEventListener("click", function(e){
         modal.classList.remove("show");
-        startGame();
+        //startGame();
     });
 }
 
